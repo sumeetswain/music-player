@@ -1,7 +1,8 @@
 body {
   height: 100vh;
   display: flex;
-  background: #183059;
+  background-color: #dfdbe5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230800ff' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -13,7 +14,7 @@ body {
   align-items: center;
   width: 450px;
   height: 600px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 .navbar {
   width: inherit;
@@ -24,14 +25,14 @@ body {
   justify-content: space-between;
 }
 
-.navbar img {
+.navbar div {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   margin: 20px;
-  border-radius: 30%;
+  border-radius: 50%;
   background: white;
-  padding: 20px;
   height: 30%;
+  width: 30px;
 }
 
 #thumbnail {
@@ -44,4 +45,33 @@ h1 {
 }
 h2 {
   margin: 0;
+}
+
+.music {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music div,
+.navbar div {
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  background: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 25px;
+  cursor: pointer;
+}
+#progress {
+  -webkit-appearance: none;
+  width: 350px;
+  height: 5px;
+  background: #50c9ce;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 40px 0;
 }

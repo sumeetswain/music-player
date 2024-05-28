@@ -5,19 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Player</title>
     <link rel="stylesheet" href="music.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container">
       <nav class="navbar">
-        <img src="angle-left.png" />
-        <img src="align-justify.png" />
+        <div><i class="fa-solid fa-angle-left"></i></div>
+
+        <div><i class="fa-solid fa-bars"></i></div>
       </nav>
       <img src="lunch break.jpg" id="thumbnail" />
       <h1>Khatta Flow</h1>
       <h2>Seedhe Maut ft. KR$NA</h2>
-      <audio controls>
+      <audio id="song">
         <source src="Khatta Flow.mp3" type="audio/mpeg" />
       </audio>
+      <input type="range" value="0" id="progress" />
+      <div class="music">
+        <div onclick="skipBack()">
+          <i class="fa-solid fa-angles-left"></i>
+        </div>
+        <div onclick="playPause()">
+          <i class="fa fa-pause" id="ctrlIcon"></i>
+        </div>
+        <div onclick="skipForward()">
+          <i class="fa-solid fa-angles-right"></i>
+        </div>
+      </div>
     </div>
   </body>
+  <script src="music.js"></script>
 </html>
